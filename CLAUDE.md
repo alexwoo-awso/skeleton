@@ -90,10 +90,16 @@ These rules prevent recurring bugs documented in `TODO.md` and `LESSONS_LEARNED.
 
 ### 2. Windows Platform Compatibility
 
-**NEVER use Unix-specific shell patterns on Windows**:
-- `> /dev/null` -> `> NUL` (Windows null device)
-- `2> /dev/null` -> `2> NUL` (Windows stderr redirect)
-- Or use cross-platform Python solutions when possible
+**Avoid output-suppression redirects entirely when possible.** Both `> /dev/null` (Unix) and `> NUL` (Windows) cause problems:
+- `> NUL` can create literal `nul` files on Windows that cannot be removed with normal Win32 APIs.
+- `> /dev/null` fails on Windows.
+- **Best approach:** Use cross-platform code that doesn't need output suppression (e.g., `subprocess.DEVNULL` in Python, `stdio: 'ignore'` in Node.js).
+
+**If a `nul` file is accidentally created**, remove it with one of:
+- Git Bash: `rm nul` (run from the exact directory containing the file -- **never** use `rm "/nul"` or any path form, only bare `rm nul`)
+- PowerShell: `Remove-Item -LiteralPath "\\?\C:\exact\path\to\nul"`
+
+**After any command that redirects output**, verify no `nul` file was created in the working directory.
 
 ---
 
