@@ -159,4 +159,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
-The skill-creator component (`.skills/skill-creator/`) includes its own Apache 2.0 license, originally from the [OpenClaw](https://github.com/openclaw/openclaw) project's [skill-creator](https://github.com/openclaw/openclaw/tree/main/skills/skill-creator). Thanks to its authors and maintainers.
+The skill-creator component (`.skills/skill-creator/`) includes its own Apache 2.0 license, originally from [Anthropic's skills repository](https://github.com/anthropics/skills/tree/main/skills/skill-creator). Thanks to its authors and maintainers.
