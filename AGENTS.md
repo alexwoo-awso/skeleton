@@ -92,9 +92,9 @@ These rules prevent recurring bugs documented in `TODO.md` and `LESSONS_LEARNED.
 
 ### 2. Windows Platform Compatibility
 
-**Avoid output-suppression redirects entirely when possible.** Both `> /dev/null` (Unix) and `> NUL` (Windows) cause problems:
-- `> NUL` can create literal `nul` files on Windows that cannot be removed with normal Win32 APIs.
-- `> /dev/null` fails on Windows.
+**Avoid output-suppression redirects entirely when possible.** Both `> /dev/null` and `> NUL` cause problems:
+- `> NUL` can create literal `NUL` files on Windows that cannot be removed with normal Win32 APIs.
+- `> /dev/null` can create literal `nul` that also cannot be removed with normal Win32 APIs
 - **Best approach:** Use cross-platform code that doesn't need output suppression (e.g., `subprocess.DEVNULL` in Python, `stdio: 'ignore'` in Node.js).
 
 **If a `nul` file is accidentally created**, remove it with one of:
