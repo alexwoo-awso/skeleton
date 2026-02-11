@@ -47,6 +47,11 @@ yarn-error.log*
 *.log
 logs/
 
+# Codex CLI local state
+# Keep .codex/config.toml (project config), ignore local state
+.codex/*.local
+.codex/history/
+
 # Packaged skills
 *.skill
 

@@ -153,3 +153,4 @@ This project uses **three separate documentation files** at the root level:
 > **This file is read by every Claude Code session**
 > **Keep it updated and concise**
 > **Your future self (and other Claude sessions) will thank you**
+> **Note:** `AGENTS.md` exists for non-Claude tools -- this file is Claude Code specific

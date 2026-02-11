@@ -1,8 +1,10 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to AI coding agents working with code in this repository.
+It follows the [AGENTS.md open standard](https://github.com/anthropics/agent-guidelines) supported by Codex CLI, OpenClaw, Cursor, Aider, Google Jules, Gemini CLI, Windsurf, Devin, and many other tools.
 
-> **Other AI tools:** See `AGENTS.md` for the universal instruction file compatible with Codex CLI, OpenClaw, Cursor, Aider, and other AGENTS.md-compatible tools.
+> **Claude Code users:** See `CLAUDE.md` for Claude Code specific instructions.
+> **Codex CLI users:** See `.codex/config.toml` for project-level Codex configuration.
 
 ---
 
@@ -93,7 +95,7 @@ These rules prevent recurring bugs documented in `TODO.md` and `LESSONS_LEARNED.
 **NEVER use Unix-specific shell patterns on Windows**:
 - `> /dev/null` -> `> NUL` (Windows null device)
 - `2> /dev/null` -> `2> NUL` (Windows stderr redirect)
-- Or use cross-platform Python solutions when possible
+- Or use cross-platform solutions when possible
 
 ---
 
@@ -131,7 +133,11 @@ These rules prevent recurring bugs documented in `TODO.md` and `LESSONS_LEARNED.
 - `TODO.md` - Active bugs and future work
 - `DONE.md` - Completed work log (chronological)
 - `LESSONS_LEARNED.md` - Critical patterns and anti-patterns
+
+**Tool-Specific Configuration**:
+- `CLAUDE.md` - Claude Code specific instructions (read automatically by Claude Code)
 - `.claude/instructions.md` - Claude Code session instructions
+- `.codex/config.toml` - Codex CLI project configuration
 
 **Update These Files**:
 - After completing work -> Add to `DONE.md`

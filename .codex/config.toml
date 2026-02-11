@@ -1,0 +1,34 @@
+# Codex CLI Project Configuration
+# https://github.com/openai/codex
+#
+# This file configures Codex CLI behavior for this project.
+# Uncomment and modify settings as needed.
+
+# --- Model ---
+# The model to use for code generation.
+# model = "o4-mini"
+
+# --- Approval Policy ---
+# Controls when Codex asks for approval before executing commands.
+# Options: "suggest" (always ask), "auto-edit" (auto-approve file edits),
+#          "full-auto" (auto-approve everything including shell commands)
+# approval_policy = "suggest"
+
+# --- Sandbox ---
+# Sandbox mode for command execution.
+# Options: "docker" (run in container), "local" (run directly on host)
+# sandbox = "local"
+
+# --- Project Documentation ---
+# Maximum size in bytes for project doc files (like AGENTS.md).
+# project_doc_max_bytes = 32768
+
+# --- Providers ---
+# Configure alternative model providers.
+# [providers.my-provider]
+# base_url = "https://api.example.com/v1"
+# env_key = "MY_API_KEY"
+
+# --- History ---
+# Disable persistent conversation history.
+# disable_history = false

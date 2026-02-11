@@ -27,11 +27,13 @@ Thanks for your interest in contributing to this project.
 
 ### Areas for Contribution
 
-- Improving template content in `CLAUDE.md`, `TODO.md`, `DONE.md`, or `LESSONS_LEARNED.md`
+- Improving template content in `AGENTS.md`, `CLAUDE.md`, `TODO.md`, `DONE.md`, or `LESSONS_LEARNED.md`
 - Adding useful default skills to `.skills/`
 - Improving the `SETUP.md` onboarding guide
 - Fixing typos and clarifying documentation
-- Adding support for additional platforms or toolchains
+- Adding support for additional AI tools or platforms
+
+> **Note:** `AGENTS.md` and `CLAUDE.md` are both self-contained instruction files. Changes to shared content (project structure, rules, documentation sections) should be reflected in both files.
 
 ## Code of Conduct
 
